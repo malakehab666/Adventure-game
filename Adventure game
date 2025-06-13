@@ -1,0 +1,62 @@
+# Adventure-game
+import time  #important time to sleep some times
+import random #import random to select random objects
+#confugre list of objects 
+places=['Forest' ,'Desert','House']
+weapons=['sword' ,'knife','Gun' ,'Rock']
+Fores_Monsters =['Bear','Rabbit' ,'lion',' wolf','Monkey']
+Desert_Mosters =['Alien','Giant MOnsters','snake','Dog']
+House =['Eat','Drink','sleep','wash Movie',]
+Game_result =['win','lose']
+#end configuration
+print('welcome to the game of adventures fun game ')
+time.sleep(2)
+print ('takes you anther world of fun and thrill')
+time.sleep(2)
+print ('we will help you during the game choice, but you have to think before each selection so you can win')
+time.sleep(2)
+name =input('please Enter your Name To start Game/n')
+print ('please choose witch place you want to play /n')
+for place in places:
+    print ( place)
+    time. sleep(2)
+choise=''
+while choise not in places:
+    msg =' Give me your choise for forest write f or forest or 1/n for desert write desert or d or 2 /n for house write house or h or 3)'
+    choise=input(msg)
+ if choise.lower() == 'Forest'.lower() or choise.lower() == 'F'.lower() or choise == '1':
+      choise ='Forest'
+    elif choise.lowed()== 'Desert'.lower() or choise.lower() == 'D'.lower() or choise =='2':
+      choise = 'Desert'
+    elif choise.lower()== 'House' .lower() or choise .lower() =='H' .lower()or choise =='3':
+       choise= 'House'
+else: 
+  choise = ''
+time.sleep(2)
+weaponchoosed=random.choice(weapons)
+print (weaponchoosed)
+changereqest = input ('would you like to change weapon /n')
+if 'changerequest' == 'yes' :
+    weaponchoosed=random.choice(weapons)   
+    print(weaponchoosed)
+print(' you now in ' + choise + ' and you have a weapon '+weaponchoosed)
+time.sleep(1)
+print ('/nyou now in '+choise + ' and you have a weapon ' +weaponchoosed )
+time.sleep(1)
+print ('now you see front of you ')
+if choise =='Forest':
+    print(random.choice(Forest_Monsters))
+if choise =='Desert':
+    print (random.choice(Desert_Mosters))
+if choise =='House':
+    print (random.choice(House))
+time.sleep(2)
+print ('Use weapon to kill monster/n')
+time.sleep(2)
+print (' you win ' + random.choice('Game_Result'))
+time.sleep(2)
+print ('Game Over')
+
+
+
+
